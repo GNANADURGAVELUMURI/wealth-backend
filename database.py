@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 # ✅ Use Render DATABASE_URL if available, otherwise use local
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:Gnana12@localhost:5432/wealth_db"
+    "postgresql://wealth_db_cj50_user:V2cShGqqlYKJ9ecIL5HJhiifJGkJtTaY@dpg-d67nhg6r433s73fajo50-a.singapore-postgres.render.com/wealth_db_cj50"
 )
 
 engine = create_engine(DATABASE_URL)
