@@ -10,6 +10,7 @@ from database import get_db
 from services.marketprice import get_live_price
 from fastapi.responses import JSONResponse
 from celery_tasks import refresh_investments_task
+from database import engine
 
 
 
@@ -364,3 +365,4 @@ def refresh(user_id: int):
         "message": "Investment refresh started in background"
     }
 
+models.Base.metadata.create_all(bind=engine)
